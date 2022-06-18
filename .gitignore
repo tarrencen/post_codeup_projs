@@ -1,0 +1,14 @@
+*.csv
+env.py
+explore.py
+__pycache__/
+__init__.py
+.DS_Store
+.ipynb_checkpoints/
+*.xlsx
+nlp_prepare.ipynb
+nlp_explore.ipynb
+*.pdf
+*.png
+*.jpeg
+*.json
