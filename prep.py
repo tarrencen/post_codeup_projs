@@ -4,10 +4,9 @@ def basic_clean(original):
     '''
     Takes in an original string and outputs a tidy "article"
     '''
-    article=original.lower()
+    article = original.lower()
     article = unicodedata.normalize('NFKD', article).encode('ascii', 'ignore').decode('utf-8', 'ignore')
-    #article = re.lstrip(r'[^(a-z\-]')
-    #article = re.sub(r"[^a-z\s\+]", '', article)
+    article = re.sub(r"[^a-z\s\+]", '', article)
     article = article.replace('&#9;', '')
     return article
 
