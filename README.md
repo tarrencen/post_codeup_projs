@@ -11,7 +11,7 @@ ___
 
 ## Table of Contents
 
-- [Predicting the Primary Programming Language for a GitHub Repository](#)
+- [Fake News Detection](#)
   - [Table of Contents](#table-of-contents)
   - [Project Summary](#project-summary)
   - [Project Planning](#project-planning)
