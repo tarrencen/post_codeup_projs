@@ -45,7 +45,7 @@ ___
 
 ### Project Description
 
-- We acquired nearly 50,000 records of real and fake news articles from Kaggle. After come cleaning and feature engineering... 
+- We acquired nearly 45,000 records of real and fake news articles from Kaggle. After some cleaning and feature engineering... 
 
 
 
