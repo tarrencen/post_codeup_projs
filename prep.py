@@ -63,7 +63,7 @@ def remove_stopwords(string, extra_words = [], exclude_words = []):
     stopword_list = set(stopword_list) - set(exclude_words)
     
     #Create 'extra_words' list.
-    extra_words = ['ha', 'wa', 'would', 'said', 'reuters']
+    extra_words = ['ha', 'wa', 'would', 'could', 'also', 'said', 'reuters']
 
     # Add in 'extra_words' to stopword_list.
     stopword_list = stopword_list.union(set(extra_words))
