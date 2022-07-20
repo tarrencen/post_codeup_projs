@@ -1,6 +1,6 @@
 from imports import *
 import nltk # Clearing "problems" (already imported from imports.py)
-
+from sklearn.model_selection import train_test_split
 
 def basic_clean(original):
     '''
@@ -20,6 +20,26 @@ def tokenize(article):
 	article_token=tokenizer.tokenize(article, return_str=True)
 	return article_token
 
+def get_splits(df):
+    train, test = train_test_split(df, test_size= 0.2, random_state=302)
+    train, validate = train_test_split(train, test_size= 0.3, random_state=302)
+    return train, validate, test
+    
+
+def isolate_lm_target(train, validate, test, target):
+    '''
+    Takes in train/validate/test splits and a target variable and returns corresponding X and y splits with
+    target variable isolated (y_train, y_validate, y_test), ready for modeling.
+    '''
+    X_train = train.drop(columns= [target])
+    y_train = train[[target]]
+
+    X_validate = validate.drop(columns= [target])
+    y_validate = validate[[target]]
+
+    X_test = test.drop(columns= [target])
+    y_test= test[[target]]
+    return X_train, y_train, X_validate, y_validate, X_test, y_test
 
 def stem(string):
     '''
